@@ -35,7 +35,7 @@ public class NumberUtils {
         int frequenciaMaxima = Collections.max(mapaDeFrequencia.values());
         List<Double> moda = new ArrayList<>();
         for (Map.Entry<Double, Integer> entry: mapaDeFrequencia.entrySet()){
-            if (entry.getValue() > frequenciaMaxima){
+            if (entry.getValue() == frequenciaMaxima){
                 moda.add(entry.getKey());
             }
         }
@@ -47,7 +47,7 @@ public class NumberUtils {
         if (crescente){
             Collections.sort(numeros);
         } else {
-            Collections.reverse(numeros);
+            Collections.sort(numeros,Collections.reverseOrder());
         }
     }
 }
